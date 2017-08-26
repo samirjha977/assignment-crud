@@ -1,7 +1,36 @@
 <html>
+
 <head>
-  <script type="text/javascript" src="main.js" ></script>
 </head>
+
 <body>
+    <p id="counter"> </p>
+    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+        <input type="text" id="add-name" placeholder="New Country">
+        <input type="submit" value="Add">
+    </form>
+    <div id="spoiler" role="aria-hidden">
+        <form action="javascript:void(0);" method="POST" id="saveEdit">
+            <input type="text" id="edit-name">
+            <input type="submit" value="Edit" />
+            <a onclick="CloseInput()" aria-label="Close"> &#10006;</a>
+        </form>
+    </div>
+    <style>
+        #spoiler {
+            display: none;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <th> Country </th>
+            <tbody id="countries"> </tbody>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="main.js"></script>
+
 </body>
+
 </html>
